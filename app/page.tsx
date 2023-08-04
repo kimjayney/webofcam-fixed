@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import React, { useState } from 'react';
+import Head from 'next/head';
 
 function InputSample() {
   const [text, setText] = useState('');
@@ -32,7 +33,14 @@ function InputSample() {
 
 function App() {
   return (
-    <InputSample />
+    <div>
+      <Head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+      </Head>
+      
+      <InputSample />
+    </div>
+    
   );
 }
 export default App;
