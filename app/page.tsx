@@ -1,5 +1,5 @@
 "use client"
-
+export const runtime = 'edge';
 import Image from 'next/image'
 import styles from './page.module.css'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 function InputSample() {
   const [text, setText] = useState('');
 
-  const onChange = (e) => {
+  const onChange = (e:any) => {
     setText(e.target.value);
   };
 
